@@ -1,0 +1,24 @@
+<div class="c-contact-list">
+  {%- if settings.contact_email != blank -%}
+    <div class="c-icon-label {{ class }}">
+      <a href="mailto:{{ settings.contact_email }}" class="c-icon-label__link">
+        {% render 'icon-ui', icon: 'email', class: 'c-icon-label__svg' %}
+        {{ settings.contact_email }}
+      </a>
+    </div>
+  {% endif %}
+  {%- if settings.contact_phone != blank -%}
+    <div class="c-icon-label {{ class }}">
+      <a href="tel:{{ settings.contact_phone }}" class="c-icon-label__link">
+        {% render 'icon-ui', icon: 'phone', class: 'c-icon-label__svg' %}
+        {{ settings.contact_phone }}
+      </a>
+    </div>
+  {% endif %}
+  {%- if settings.contact_address != blank -%}
+    <div class="c-icon-label c-icon-label__address {{ class }}">
+      {% render 'icon-ui', icon: 'map', class: 'c-icon-label__svg' %}
+      <p class="c-icon-label__text">{{ settings.contact_address }}</p>
+    </div>
+  {% endif %}
+</div>

@@ -1,0 +1,24 @@
+<div class="c-faq">
+  <div class="c-faq__container">
+    <div class="c-faq__text-wrapper">
+      {% if section.settings.text != blank %}
+        <div class="c-faq__text">
+          {{ section.settings.text }}
+        </div>
+      {% endif %}
+      {% if section.settings.faq_image != blank %}
+        {% render 'responsive-image', image: section.settings.faq_image, class: 'c-faq__img' %}
+      {% endif %}
+    </div>
+    <mtn-accordion data-section="{{ section.id }}" id="accordion-{{ section.id }}"  class="c-accordion c-faq__accordion">
+      <div class="c-accordion__container c-faq__acc-container">
+        {% for block in section.blocks%}
+          <div class="c-accordion__row c-faq__acc-row" data-accordion-row>
+            <div class="c-accordion__title c-faq__acc-title">{{ block.settings.question }}<span class="c-accordion__icon">{% render 'icon-ui', icon: 'plus', class: 'c-accordion__icon-img c-faq__acc-img' %}</span></div>
+            <div class="c-accordion__text" data-accordion-text>{{ block.settings.answer }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    </mtn-accordion>
+  </div>
+</div>

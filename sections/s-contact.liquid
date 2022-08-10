@@ -1,0 +1,96 @@
+<div class="l-container">
+  {% render 'c-breadcrumb' %}
+</div>
+
+<div class="s-contact">
+  <div class="s-contact__body l-container">
+    <div class="s-contact__title">
+      {% render 'c-page-title' %}
+    </div>
+    <div class="s-contact__content">
+      <div class="s-contact__form">
+        {% render 'c-contact-form' %}
+      </div>
+      <div class="s-contact__info">
+        <h2 class="s-contact__info-title">{{ section.settings.title }}</h2>
+        <p>{{ section.settings.text }}</p>
+        <div class="s-contact__contact-list">
+          {% render 'c-contact-list' %}
+        </div>
+        {%- if section.settings.show_social -%}
+          <div class="s-contact__socials">
+            {% render 'c-socials', 
+              show_instagram: section.settings.show_instagram,
+              show_facebook: section.settings.show_facebook,
+              show_twitter: section.settings.show_twitter,
+              show_pinterest: section.settings.show_pinterest,
+              show_youtube: section.settings.show_youtube
+            %}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact",
+  "tag":"section",
+  "settings": [
+    {
+			"type": "text",
+			"id": "title",
+			"label": "Info title",
+      "default": "Have any questions?"
+		},
+    {
+			"type": "text",
+			"id": "text",
+			"label": "Info text",
+      "default": "We're always happy to chat and help answer any questions you may have! Please note, we try our best to respond to all inquiries within 48 hours, Monday - Friday."
+		},
+    {
+      "type": "header",
+      "content": "SOCIAL MEDIA ICONS",
+      "info": "To display your social media accounts, link them in your theme settings."
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social",
+      "default": true,
+      "label": "Show social media icons"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_instagram",
+      "default": true,
+      "label": "Show instagram icon"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_facebook",
+      "default": true,
+      "label": "Show facebook icon"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_twitter",
+      "default": true,
+      "label": "Show twitter icon"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_pinterest",
+      "default": true,
+      "label": "Show pinterest icon"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_youtube",
+      "default": true,
+      "label": "Show youtube icon"
+    }
+  ]
+}
+{% endschema %}

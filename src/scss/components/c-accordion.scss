@@ -1,0 +1,40 @@
+.c-accordion {
+  $accordion-line-color: $color-ui-accordion-line;
+  $accordion-text-color: $color-text-primary;
+
+  &__text {
+    overflow-y: hidden;
+    max-height: 0;
+  }
+
+  &__text.is-opened {
+    max-height: 100%;
+    padding-top: 18px;
+  }
+
+  &__row {
+    padding-top: 20px;
+    padding-bottom: 21px;
+    border-bottom: 2px solid $accordion-line-color;
+    color: $accordion-text-color;
+  }
+
+  &__row.is-row-opened &__icon-img path:last-of-type {
+    display: none;
+  }
+
+  &__row:first-of-type {
+    border-top: 2px solid $accordion-line-color;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 125%;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}

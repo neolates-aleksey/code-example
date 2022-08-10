@@ -1,0 +1,53 @@
+.c-icon-label {
+  display: flex;
+  margin-bottom: 48px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    color: $color-text-primary;
+
+    &:hover {
+      color: $color-link;
+    }
+  }
+
+  &__text {
+    color: $color-text-primary;
+  }
+
+  &__svg {
+    font-size: 34px;
+    margin-right: 16px;
+    flex-shrink: 0;
+    color: $color-accent-bright;
+  }
+
+  &_styled {
+    font-size: $font-size-sm;
+    color: $color-text-footer;
+    margin-bottom: 22px;
+  }
+
+  &_styled &__link {
+    color: $color-text-footer;
+
+    &:hover {
+      color: $color-link;
+    }
+  }
+
+  &_styled &__svg {
+    margin-right: 11px;
+    font-size: 24px;
+    color: inherit;
+  }
+
+  &_styled &__text {
+    color: $color-text-footer;
+  }
+}

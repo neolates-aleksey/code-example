@@ -1,0 +1,51 @@
+.c-faq {
+  &__acc-container {
+    margin-top: 30px;
+    @include media-breakpoint-up(lg) {
+      margin-top: 0;
+    }
+  }
+
+  &__acc-row:first-of-type {
+    border-top: none;
+  }
+
+  &__acc-img path {
+    stroke: $color-accent;
+  }
+
+  &__acc-title {
+    font-weight: 600;
+    text-transform: none;
+  }
+
+  &__img {
+    display: none;
+    @include media-breakpoint-up(lg) {
+      display: block;
+      margin-left: -80px;
+      max-width: 363px;
+      height: auto;
+    }
+    @include media-breakpoint-up(xxl) {
+      margin-left: calc(-1 * (50vw - 1440px / 2 + 80px));
+    }
+  }
+
+  &__container {
+    @include media-breakpoint-up(lg) {
+      display: flex;
+    }
+  }
+
+  &__accordion {
+    max-width: 576px;
+  }
+
+  &__text-wrapper {
+    @include media-breakpoint-up(lg) {
+      margin-right: 90px;
+      max-width: 363px;
+    }
+  }
+}

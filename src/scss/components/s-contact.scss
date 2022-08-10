@@ -1,0 +1,60 @@
+.s-contact {
+  &__title {
+    margin-top: 50px;
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      margin-top: 75px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-top: 60px;
+    }
+  }
+
+  &__content {
+    margin-top: 60px;
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    @include media-breakpoint-up(lg) {
+      margin: 0 16px;
+      margin-right: 71px;
+    }
+  }
+
+  &__info {
+    margin-top: 70px;
+    @include media-breakpoint-up(lg) {
+      margin-top: 0;
+      max-width: 300px;
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: 400px;
+    }
+    @include media-breakpoint-up(xxl) {
+      max-width: 500px;
+    }
+  }
+
+  &__info-title {
+    margin-bottom: 16px;
+  }
+
+  &__contact-list {
+    margin-top: 52px;
+    margin-bottom: 78px;
+    max-width: 300px;
+  }
+
+  &__slider {
+    margin-top: 70px;
+    @include media-breakpoint-up(lg) {
+      margin-top: 90px;
+    }
+  }
+}
